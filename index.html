@@ -1,0 +1,68 @@
+<!Doctype html>
+<hmtl>
+<head>
+
+<meta charset=UTF-8>
+<title>CALCULO IMC</title>
+<link rel="stylesheet" type="text/css" href="estilo_imc.css">
+<script>
+function calculoIMC()
+{
+var peso, altura, imc, reco,nombre;
+nombre=document.getElementById("nombre").value
+peso=document.getElementById("peso").value
+altura=document.getElementById("altura").value/100;
+imc=peso/(altura*altura);
+document.getElementById("imc").value=imc.toFixed(3);
+if(imc<=20.5)
+{
+reco=nombre+" usted esta delgado/a, necesita subir "; 
+}
+else if(imc>25.5)
+{
+reco=nombre+" usted tiene sobre peso, necesita hacer ejercicio ";
+}
+else 
+{
+reco=nombre+" felicidades usted esta en su peso ideal";
+}
+
+document.getElementById("reco").value=reco;
+
+}
+</script>
+</head>
+<body bgcolor:"yellow">
+<hr><hr>
+<form name="imc">
+<h2 p align="center">CALCULO DE <img src="imcs.jpg" width="40" height="30">  <h2>
+</center>
+</h2>
+<hr>
+<hr>
+<p align="center">
+INTRODUSCA SU NOMBRE:<br>	
+<input type="text" name="nombre" id="nombre" size="20" maxlength="30" align="center">
+<br>
+INGRESE SU PESO(Kg):<br>
+<input type="text" name="peso" id="peso" size="20" maxlength="6" align="center">
+<br>
+INGRESE SU ALTURA(cm):<br>
+<input type="text" name="altura" id="altura" size="20" maxlength="6" align="center">
+<br>
+
+<input type="button" value="CALCULAR" onClick="calculoIMC()" style="width:140px; height:30px; text-align:center; font-weight:bold; border-radius:3px;">
+<br>
+SU IMC ES:<br>
+<input type="text" name="imc" id="imc" size="20" maxlength="15" style="text-align:center; font-weight:bold; font-family:Arial;">
+<br>
+RECOMENDACION:<br>
+
+<textarea  readonly rows="4" cols="30" id="reco" ></textarea>
+<br>
+<input type="reset" value="NUEVO CALCULO" style="width:140px; height:30px; text-align:center; font-weight:bold; border-radius:3px;">
+<hr>
+</fieldset>
+</form>
+</body>
+</html>

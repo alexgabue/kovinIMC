@@ -1,0 +1,28 @@
+body{
+	background-color:#FFF0;
+}
+form{
+	font-family:Arial;
+	font-size:18px;
+	color:#1B1B1B;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px red ;
+	
+}
+div
+{
+	
+	font-weight:bold;
+	text-shadow: 3px 3px 3px black;
+	font-size:38px;
+	font-family:Trebuchet MS;
+   -webkit-text-fill-color:red;
+	text-align :center;
+
+
+}
+textarea{
+	resize:none;
+	font-size:16px;
+	font-family:'Caviar Dreams';
+	font-weight:bold;
